@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
@@ -9,12 +10,12 @@ import Header from './components/header/header.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 class App extends React.Component {
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
       currentUser: null
-    }
+    };
   }
 
   unsubscribeFromAuth = null;
@@ -30,11 +31,13 @@ class App extends React.Component {
               id: snapShot.id,
               ...snapShot.data()
             }
-          })
+          });
+
+          //console.log(this.state);
         });
-      } else {
-        this.setState({currentUser: userAuth});
       }
+
+      this.setState({ currentUser: userAuth });
     });
   }
 
@@ -42,19 +45,18 @@ class App extends React.Component {
     this.unsubscribeFromAuth();
   }
 
-  render(){
+  render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser}/>
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route exact path='/Shop' component={ShopPage} />
-          <Route exact path='/signin' component={SignInAndSignUpPage} /> 
+          <Route path='/shop' component={ShopPage} />
+          <Route path='/signin' component={SignInAndSignUpPage} />
         </Switch>
       </div>
     );
   }
-  
 }
 
 export default App;
