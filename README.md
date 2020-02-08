@@ -12,7 +12,7 @@
   </p>
 </p>
 
-## About The Project
+## **About The Project**
 
 This project is based on react technique and combine with firebase and heroku deploying tools. This project keeps updating for backend and database. Until now, the front-end is generally completed. There are the techniques below used in this project.
 
@@ -23,7 +23,7 @@ I still updating this project to make it more comprehensive and functional. I'm 
 
 ## Techniques
 <br><br>
-Front-end:<br>
+Front-end:
 * [HTML/HTML5](https://www.w3schools.com/html/)
 * [CSS3](https://www.w3schools.com/css/default.asp)
 * [SemanticUI](https://semantic-ui.com/)
