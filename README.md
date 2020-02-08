@@ -18,7 +18,7 @@ This project is based on react technique and combine with firebase and heroku de
 
 In this project, users can login/register to the system. In the local environment, I already implemented the google sign in authorization. However, there's still some problems when deployed to heroku. After the shopping, users can checkout the merchandises. For the checkout part, I used Stripe online payment platform. Because this is the profolio project not the real shopping website, I used this by public key and can check out by the sample credit card.
 
-#In the future
+###### In the future
 I still updating this project to make it more comprehensive and functional. I'm planning to add the backend part, context API and use GraphQL to implement it. Moreover, this project will be more mobile responsive and adapt to any mobile screen. 
 
 ## Techniques
